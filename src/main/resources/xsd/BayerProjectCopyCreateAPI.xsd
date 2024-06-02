@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns="http://ecosys.net/api/BayerProjectCopyCreateAPI" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ecosys.net/api/BayerProjectCopyCreateAPI">
+    <xs:element name="BayerProjectCopyCreateAPIResult" type="BayerProjectCopyCreateAPIResultType"/>
+    <xs:complexType name="BayerProjectCopyCreateAPIResultType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Performance" type="PerformanceType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Error" type="ErrorType"/>
+        </xs:sequence>
+        <xs:attribute name="successFlag" type="xs:boolean"/>
+        <xs:attribute name="schemaLocation" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="PerformanceType">
+        <xs:sequence>
+            <xs:element name="ElapsedSeconds" type="xs:double"/>
+            <xs:element name="CPUSeconds" type="xs:double"/>
+            <xs:element name="DatabaseSeconds" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DocumentLinkType">
+        <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+        <xs:attribute name="contentType" type="xs:string" use="optional"/>
+        <xs:attribute name="sizeBytes" type="xs:int" use="optional"/>
+        <xs:attribute name="fileTime" type="xs:dateTime" use="optional"/>
+        <xs:attribute name="filename" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="DocumentValueType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="title" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="link" type="DocumentLinkType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ErrorType">
+        <xs:sequence>
+            <xs:element name="Message" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Exception" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="StackTrace" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="status" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

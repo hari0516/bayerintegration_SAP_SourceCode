@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="globalConstants" class="com.bayer.integration.properties.GlobalConstants">
+		<property name="appProperties" ref="appProperties" />
+	</bean>
+
+	<bean id="epcRestMgr" class="com.ecosys.service.EpcRestMgrImpl">
+	</bean>	
+	
+	<bean id="dbMgr" class="com.bayer.integration.persistence.StagingDatabaseManagerImpl">
+		<property name="epcDataSource" ref="epcDataSource" />
+	</bean>
+				
+	<bean id="odataSvcMgr" class="com.bayer.integration.sapservice.SAPGatewayODataServiceMgrImpl">
+	</bean>
+	
+	<bean id="prjMgr" class="com.bayer.integration.service.ProjectExportManagerImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />	
+	</bean>
+			
+	<bean id="hlpMgr" class="com.bayer.integration.service.ImportManagerHelper">
+		<property name="epcRestMgr" ref="epcRestMgr" />	
+	</bean>
+				
+	<bean id="wbMgr" class="com.bayer.integration.service.WBSExportManagerImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />	
+	</bean>
+	
+	<bean id="wbsMgr" class="com.bayer.integration.service.WBSImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />	
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="wbsExpMgr" ref="wbMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+	
+	<bean id="wpMgr" class="com.bayer.integration.service.PMOrderImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />
+		<property name="stgDBMgr" ref="dbMgr" />	
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="wbsExpMgr" ref="wbMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+		
+	<bean id="trackPrMgr" class="com.bayer.integration.service.PRHeaderImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />	
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+
+	<bean id="comPrMgr" class="com.bayer.integration.service.PRLineItemImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+	
+	<bean id="trackPOMgr" class="com.bayer.integration.service.POHeaderImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />	
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+	
+	<bean id="comMgr" class="com.bayer.integration.service.POLineItemImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+			
+	<bean id="acMgr" class="com.bayer.integration.service.ActualImportMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+	
+	<bean id="prjcpMgr" class="com.bayer.integration.service.ProjectCopyCreateMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+	
+	<bean id="prjcpdMgr" class="com.bayer.integration.service.ProjectCopyDeleteMgrImpl">
+		<property name="epcRestMgr" ref="epcRestMgr" />
+		<property name="stgDBMgr" ref="dbMgr" />
+		<property name="prjExpMgr" ref="prjMgr" />
+		<property name="importHelper" ref="hlpMgr" />
+		<property name="odataSvcMgr" ref="odataSvcMgr" />
+	</bean>
+</beans>

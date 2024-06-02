@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns="http://ecosys.net/api/BayerActualsAPI" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://ecosys.net/api/BayerActualsAPI">
+    <xs:element name="BayerActualsAPIResult" type="BayerActualsAPIResultType"/>
+    <xs:complexType name="BayerActualsAPIResultType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="Meta"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="BayerActualsAPI" type="BayerActualsAPIType"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="ObjectResult" type="ObjectResultType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Performance" type="PerformanceType"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Error" type="ErrorType"/>
+        </xs:sequence>
+        <xs:attribute name="successFlag" type="xs:boolean"/>
+        <xs:attribute name="schemaLocation" type="xs:string"/>
+    </xs:complexType>
+    <xs:element name="BayerActualsAPIRequest" type="BayerActualsAPIRequestType"/>
+    <xs:complexType name="BayerActualsAPIRequestType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="BayerActualsAPI" type="BayerActualsAPIType"/>
+        </xs:sequence>
+        <xs:attribute name="schemaLocation" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="BayerActualsAPIType">
+        <xs:sequence>
+            <xs:element name="CostObjectExternalKey" type="xs:string"/>
+            <xs:element name="CostObjectID" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="SAPWBSElement" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="AlternateCostTransactionCurrency" type="xs:double"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="CostCostObjectCurrency" type="xs:double"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="CurrencyCostObjectCode" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="CostTransactionCurrency" type="xs:double"/>
+            <xs:element name="CurrencyTransactionCode" type="xs:string"/>
+            <xs:element name="CostAccountID" type="xs:string"/>
+            <xs:element name="CostAccountName" type="xs:string"/>
+            <xs:element name="TransactionDate" type="xs:date"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="FIDocumentNumber" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="CommitmentID" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="VendorID" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="VendorName" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="ConversionRateCostObjectCurrency" type="xs:double"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="ExternalKey" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="VersionID" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="ControllingArea" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="ActualReferenceHeaderText" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="ActualReferenceDoc" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="OffsettingAccountNumber" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="SAPPurchasingDocumentLineItemNumber" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="SAPPurcharsingOrderSeqNumber" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="SAPAccrualID" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Postingrow" type="xs:double"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="SAPExchangeRate" type="xs:double"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="SAPUniqueID" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="TransactionExchangeRateSource" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ObjectResultType">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="ResultMessage" type="ResultMessageType"/>
+        </xs:sequence>
+        <xs:attribute name="externalId" type="xs:string"/>
+        <xs:attribute name="internalId" type="xs:string"/>
+        <xs:attribute name="successFlag" type="xs:boolean"/>
+    </xs:complexType>
+    <xs:complexType name="ResultMessageType">
+        <xs:sequence>
+            <xs:element name="KeyName"/>
+            <xs:element name="Message"/>
+            <xs:element minOccurs="1" name="Exception"/>
+            <xs:element minOccurs="1" name="StackTrace"/>
+        </xs:sequence>
+        <xs:attribute name="level" type="xs:string"/>
+        <xs:attribute name="reasonCode" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="PerformanceType">
+        <xs:sequence>
+            <xs:element name="ElapsedSeconds" type="xs:double"/>
+            <xs:element name="CPUSeconds" type="xs:double"/>
+            <xs:element name="DatabaseSeconds" type="xs:double"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DocumentLinkType">
+        <xs:attribute name="href" type="xs:anyURI" use="optional"/>
+        <xs:attribute name="contentType" type="xs:string" use="optional"/>
+        <xs:attribute name="sizeBytes" type="xs:int" use="optional"/>
+        <xs:attribute name="fileTime" type="xs:dateTime" use="optional"/>
+        <xs:attribute name="filename" type="xs:string" use="optional"/>
+    </xs:complexType>
+    <xs:complexType name="DocumentValueType">
+        <xs:sequence>
+            <xs:element maxOccurs="1" minOccurs="0" name="title" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="link" type="DocumentLinkType"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ErrorType">
+        <xs:sequence>
+            <xs:element name="Message" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="Exception" type="xs:string"/>
+            <xs:element maxOccurs="1" minOccurs="0" name="StackTrace" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="status" type="xs:string"/>
+    </xs:complexType>
+</xs:schema>

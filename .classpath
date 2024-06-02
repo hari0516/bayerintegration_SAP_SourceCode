@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/test/resources">
+		<attributes>
+			<attribute name="test" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/aalto-xml-0.9.10.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/aopalliance.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/asm.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/com.fasterxml.jackson.core-jackson-annotations-2.7.8.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/com.fasterxml.jackson.core-jackson-core-2.7.8.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/com.fasterxml.jackson.core-jackson-databind-2.7.8.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/com.fasterxml.jackson.dataformat-jackson-dataformat-xml-2.7.8.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/com.fasterxml.jackson.module-jackson-module-jaxb-annotations-2.7.8.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/com.fasterxml-aalto-xml-0.9.10.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-codec.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-codec-commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-csv-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-io-commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-logging.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-logging-commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/commons-pool-1.5.5.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/cxf-bundle.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/ecosysintg.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/FastInfoset.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/gateway.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/geronimo-annotation_1.0_spec.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/geronimo-jaxws_2.1_spec.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/geronimo-stax-api_1.0_spec.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/geronimo-ws-metadata_2.0_spec.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/httpclient-4.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/intgserver.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-databind-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-dataformat-xml-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-module-jaxb-annotations-2.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jaxb-core-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jaxb-impl-2.3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jersey-bundle-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jersey-client-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jersey-core-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jersey-json-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jersey-server-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jersey-servlet-1.14.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/joda-time-1.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/mail.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/mpxj.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/mssql-jdbc-6.4.0.jre8.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/neethi.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/odata-client-api-4.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/odata-client-core-4.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/odata-commons-api-4.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/odata-commons-core-4.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.apache.commons-commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.apache.httpcomponents-httpclient-4.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.apache.httpcomponents-httpcore-4.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.apache.olingo-olingo-odata2-api-2.0.10.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.apache.olingo-olingo-odata2-api-annotation-2.0.10.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.apache.olingo-olingo-odata2-core-2.0.10.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.codehaus.woodstox-stax2-api-3.1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.jaxen_1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/org.slf4j-slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/osdt_cert.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/osdt_core.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/osdt_saml.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/osdt_saml2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/osdt_wss.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/osdt_xmlsec.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/p6ws-jaxws-client.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/slf4j-api-1.7.11.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/spring.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/stax2-api-3.1.4.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/woodstox-core-5.0.3.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/wsdl4j-1.6.2.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/wss4j.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/wstx-asl.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/xml-resolver.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/XmlSchema.jar"/>
+	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/Integration/Libraries/xmlsec.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

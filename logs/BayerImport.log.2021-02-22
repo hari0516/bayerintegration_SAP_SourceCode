@@ -1,0 +1,1462 @@
+2021-02-22 09:47:32,237 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:24c2c61f-2a0a-4330-ad6c-bd2a62692245)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:24c2c61f-2a0a-4330-ad6c-bd2a62692245
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 09:47:32,270 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 09:47:33,610 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 09:47:33,620 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 09:47:33,620 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 09:47:33,621 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,621 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 09:47:33,648 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,691 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,691 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,691 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:47:33,691 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,701 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 09:47:33,701 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00.010
+2021-02-22 09:47:33,701 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:47:33,701 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 09:47:33,701 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:47:35,403 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:47:35,883 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:47:36,504 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,408EBD74B2BD1EC0DFDD417CF7126357
+2021-02-22 09:47:36,511 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:47:36,640 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:47:36,756 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D3D287A7BBD3FDDAFC913064DE04D694
+2021-02-22 09:47:36,772 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:47:36,925 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:47:36,972 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,DDE8D866906E43D78A38803B6655F2A0
+2021-02-22 09:47:40,443 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 09:47:42,367 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 09:48:40,181 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:48:40,181 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 09:48:40,197 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,732E6E040524768E24C86E3591B6A11A
+2021-02-22 09:48:40,197 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 09:49:00,617 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 09:49:00,617 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 09:49:00,634 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 09:49:00,634 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:26.933
+2021-02-22 09:49:00,993 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:49:01,133 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:49:01,202 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,585FC70D375A2E64D1EDD3F52A95403A
+2021-02-22 09:49:01,202 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:49:01,318 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:49:01,387 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,148C24D15148A9BBBF80ADA81136A1AA
+2021-02-22 09:49:01,387 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:49:01,519 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:49:01,534 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,A06D128A7817BF8E8FE8DF68818798F7
+2021-02-22 09:49:01,534 DEBUG com.bayer.integration.service.ImportManagerBase.importData:111 - 9100 -- Delete Project Copies Completed Successfully
+2021-02-22 09:49:01,534 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:00:00.900
+2021-02-22 09:49:01,534 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 09:49:01,534 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:02:49.395
+2021-02-22 09:49:01,534 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 09:50:31,013 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:cd3dc3fd-5ed2-4a79-8217-5c65573f1a17)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:cd3dc3fd-5ed2-4a79-8217-5c65573f1a17
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 09:50:31,068 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 09:50:31,182 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 09:50:31,182 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 09:50:31,182 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 09:50:31,182 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,182 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,213 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,213 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,213 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,213 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:50:31,213 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 09:50:31,213 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:50:31,715 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:50:32,025 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:50:32,643 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,0E5778AE55D48F89D776DF5E11274AE4
+2021-02-22 09:50:32,652 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:50:32,766 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:50:32,938 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,10822251CE4BCB43BEA5F6523858797A
+2021-02-22 09:50:32,938 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:50:33,030 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:50:33,077 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,064B0039D79D42113335E432E323426D
+2021-02-22 09:50:33,146 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 09:50:33,146 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 09:51:38,418 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:38,418 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 09:51:38,430 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,A17BE7A191D4CB262C999B360D698123
+2021-02-22 09:51:38,430 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 09:51:38,430 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 09:51:38,430 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 09:51:38,430 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 09:51:38,430 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:07.217
+2021-02-22 09:51:38,502 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:51:38,650 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:38,705 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,768A6BBA7042373369431CDD6F7DBBB9
+2021-02-22 09:51:38,705 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:51:38,838 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:38,878 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,814BBA04B3A1A938B564E3DF746865D1
+2021-02-22 09:51:38,886 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:51:39,009 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:39,022 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,8DFBB847AF7628919AF2A9DA4F8F3FBA
+2021-02-22 09:51:39,022 DEBUG com.bayer.integration.service.ImportManagerBase.importData:111 - 9100 -- Delete Project Copies Completed Successfully
+2021-02-22 09:51:39,022 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:00:00.592
+2021-02-22 09:51:39,022 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 09:51:39,022 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:01:10.394
+2021-02-22 09:51:39,022 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 09:51:49,467 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:126fe85a-a77e-4c98-9646-3434d1b7b8ab)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:126fe85a-a77e-4c98-9646-3434d1b7b8ab
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 09:51:49,485 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 09:51:49,567 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 09:51:49,567 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 09:51:49,567 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 09:51:49,583 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,583 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,630 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,630 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,630 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,630 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:51:49,630 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 09:51:49,630 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:51:50,096 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:51:50,412 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:51,014 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,8C261CCB5D7670564034808FE645D655
+2021-02-22 09:51:51,018 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:51:51,106 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:51,299 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,A775808DDCE91C6C16D20E632BDA604C
+2021-02-22 09:51:51,307 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:51:51,392 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:51:51,451 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,13433F312C9543CD1A099DA5287738A0
+2021-02-22 09:51:51,504 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 09:51:51,504 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 09:52:58,885 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:52:58,900 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 09:52:58,902 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,9F89867D155801289C39D6B8F00BEE2D
+2021-02-22 09:52:58,902 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 09:52:58,902 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 09:52:58,902 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 09:52:58,902 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 09:52:58,902 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:09.272
+2021-02-22 09:52:59,031 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:52:59,176 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:52:59,238 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,391F28E4C6AF1302170099EEC10B0CA7
+2021-02-22 09:52:59,238 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:52:59,329 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:52:59,380 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,783E045D641171BAA53F732DA5E623A5
+2021-02-22 09:52:59,380 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:52:59,492 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:52:59,510 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,6628C0B70F31143CCE92A7BFD4773E40
+2021-02-22 09:52:59,512 DEBUG com.bayer.integration.service.ImportManagerBase.importData:111 - 9100 -- Delete Project Copies Completed Successfully
+2021-02-22 09:52:59,512 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:00:00.610
+2021-02-22 09:52:59,512 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 09:52:59,512 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:01:12.476
+2021-02-22 09:52:59,512 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 09:53:50,141 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:2b718e33-a7ef-435e-95d7-8fcdb1c8f41d)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:2b718e33-a7ef-435e-95d7-8fcdb1c8f41d
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 09:53:50,151 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 09:53:50,273 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 09:53:50,273 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 09:53:50,273 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 09:53:50,273 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,279 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00.006
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,295 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,295 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,295 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:53:50,310 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,310 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 09:53:50,310 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:53:50,310 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,310 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 09:53:50,310 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:53:50,310 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 09:53:50,310 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 09:53:50,310 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 09:53:50,812 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:53:51,093 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:53:51,623 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,58307F49A232A1AEF34B6B91DD2FF69D
+2021-02-22 09:53:51,627 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:53:51,736 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:53:51,889 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,C85D760DE16C133D2420893E3E04C524
+2021-02-22 09:53:51,889 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:53:51,985 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:53:52,032 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,E52FB36B5CB2C1AEECC3F8FBA2798528
+2021-02-22 09:53:52,085 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 09:53:52,085 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 09:54:57,590 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:54:57,591 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 09:54:57,598 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,5EE78F17D9CEC87D985ABE4C91894A12
+2021-02-22 09:54:57,598 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 09:54:57,599 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 09:54:57,599 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 09:54:57,599 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 09:54:57,599 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:07.289
+2021-02-22 09:54:57,731 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 09:54:57,866 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:54:57,917 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,2F0B61E6DF942DD45A85AE75811C4367
+2021-02-22 09:54:57,917 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 09:54:58,067 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:54:58,110 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,053CA0AB92E8F50C8A0947FAA660094C
+2021-02-22 09:54:58,110 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 09:54:58,229 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 09:54:58,244 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,3CA98C987A219CB248446290A2311174
+2021-02-22 09:54:58,244 DEBUG com.bayer.integration.service.ImportManagerBase.importData:111 - 9100 -- Delete Project Copies Completed Successfully
+2021-02-22 09:54:58,244 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:00:00.644
+2021-02-22 09:54:58,244 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 09:54:58,244 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:01:10.394
+2021-02-22 09:54:58,244 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 12:59:09,376 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:46538656-5ea4-45ac-8821-761ccd8b4a01)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:46538656-5ea4-45ac-8821-761ccd8b4a01
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 12:59:09,394 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 12:59:10,191 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 12:59:10,191 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 12:59:10,191 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 12:59:10,191 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,191 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 12:59:10,219 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,221 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,221 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,221 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,221 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 12:59:10,221 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 12:59:10,221 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 12:59:10,229 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00.008
+2021-02-22 12:59:11,465 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 12:59:11,831 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 12:59:12,926 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,5E323F961ABA3751037DB700BA72E883
+2021-02-22 12:59:12,932 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 12:59:13,077 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 12:59:13,249 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,B20DC0D01A731B6D3DCD2D3D0C72CBC9
+2021-02-22 12:59:13,249 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 12:59:13,371 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 12:59:13,440 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,2FECAA05609ABC573319AE1C4844E43C
+2021-02-22 12:59:23,383 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 12:59:24,405 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 13:00:35,116 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:00:35,132 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 13:00:35,138 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,AADA1897E0E19FAC43F0D7ECD6FA8F41
+2021-02-22 13:00:35,138 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 13:01:45,479 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 13:01:45,479 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 13:01:45,485 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:01:45,486 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:02:35.254
+2021-02-22 13:01:45,819 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:01:45,965 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:01:46,034 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,0D85DE5057F2CC01CE377B84F72371A6
+2021-02-22 13:01:46,034 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:01:46,165 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:01:46,234 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,90608C42F1BC82A30E2791A49F7E1972
+2021-02-22 13:01:46,234 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:01:46,328 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:01:46,350 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,BB8D1EEF59610FA6E24A93330779DC49
+2021-02-22 13:10:10,540 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:d81df0a3-790e-43c4-83d4-67bcc00ee57b)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:d81df0a3-790e-43c4-83d4-67bcc00ee57b
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:10:10,555 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:10:11,022 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:10:11,022 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:10:11,037 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:10:11,037 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,037 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,053 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,053 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,053 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,053 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,053 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:10:11,053 INFO  com.bayer.integration.service.ImportManagerBase.importData:100 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:10:11,069 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:10:11,069 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:00:00.016
+2021-02-22 13:10:12,671 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:10:13,017 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:10:14,437 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,6F5A2821B5A0B1A7A54569D1FDA9516B
+2021-02-22 13:10:14,440 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:10:14,581 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:10:14,763 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,FA009F4AC27D31F316CFC3C0294F1EBF
+2021-02-22 13:10:14,763 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:10:14,882 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:10:14,955 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,469BD8D63E5173E2EFDAFF9DDCDE42B1
+2021-02-22 13:13:01,194 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:af531cc1-c99f-4e0e-a12f-b364377d0e7f)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:af531cc1-c99f-4e0e-a12f-b364377d0e7f
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:13:01,207 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:13:01,683 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:13:01,685 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:13:01,685 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:13:01,685 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,685 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,705 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,705 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,705 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:01,713 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,713 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00.002
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,715 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,715 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.service.ImportManagerBase.importData:100 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:13:01,715 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:13:01,715 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:13:03,010 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:13:03,417 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:13:04,296 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,2008F035D171C8D80F7992C2BDF06B06
+2021-02-22 13:13:04,300 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:13:04,428 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:13:04,631 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,54F6F6B1A14F25C4BCC4A009213A2B9D
+2021-02-22 13:13:04,631 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:13:04,763 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:13:04,842 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,BC45724968DFB07B316AB590D7C65AD7
+2021-02-22 13:22:15,629 ERROR com.bayer.integration.service.ImportManagerBase.importData:213 - 9105 -- Delete Project Copy Failed
+java.lang.NullPointerException
+	at com.bayer.integration.service.ProjectCopyDeleteMgrImpl.updateDeleteList(ProjectCopyDeleteMgrImpl.java:306)
+	at com.bayer.integration.service.ProjectCopyDeleteMgrImpl.importData(ProjectCopyDeleteMgrImpl.java:156)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:77)
+2021-02-22 13:22:15,634 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:09:13.914
+2021-02-22 13:22:15,634 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 13:22:15,634 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:09:20.223
+2021-02-22 13:22:15,635 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 13:27:17,468 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:bd6b2e85-46de-41cc-94af-d20450a9f654)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:bd6b2e85-46de-41cc-94af-d20450a9f654
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:27:17,483 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:27:17,852 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:27:17,852 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:27:17,852 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:27:17,852 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,852 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,868 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,868 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:17,868 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,868 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00.016
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,884 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,884 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.service.ImportManagerBase.importData:100 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:27:17,884 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:27:17,884 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:27:19,258 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:27:19,541 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:27:20,171 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,4AA226AB35BF811CB7400A281D9C57F9
+2021-02-22 13:27:20,179 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:27:20,343 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:27:20,495 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,B6EB57550B8B1A1282FF599D80588A4F
+2021-02-22 13:27:20,503 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:27:20,606 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:27:20,667 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,47B4D4FEB75505FB1F12A5F565304808
+2021-02-22 13:33:36,817 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:bb76f8a2-eb69-4a60-bcbf-7f3f6d38f328)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:bb76f8a2-eb69-4a60-bcbf-7f3f6d38f328
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:33:36,831 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:33:37,258 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:33:37,258 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:33:37,258 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:33:37,258 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,258 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,288 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,288 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:33:37,288 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,296 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:33:37,298 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00.008
+2021-02-22 13:33:37,298 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,298 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:33:37,298 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:33:37,298 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:33:37,298 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:33:37,298 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:33:38,725 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:33:38,999 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:33:39,979 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,70AAEEF4374CBBB0E70B9F9DB0B62A5A
+2021-02-22 13:33:39,982 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:33:40,113 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:33:40,285 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,F38AB3E124BA7DBFCB31D075688DAF6B
+2021-02-22 13:33:40,285 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:33:40,367 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:33:40,437 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,42D78DA97F24493F13EF317DA670C97F
+2021-02-22 13:34:07,139 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 13:34:08,656 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 13:35:01,605 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:35:01,605 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 13:35:01,612 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,543DDC048CB3E1654A80A9DA8826C372
+2021-02-22 13:35:01,612 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 13:35:35,785 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 13:35:35,785 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 13:35:35,792 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:35:35,792 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:58.494
+2021-02-22 13:35:36,125 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:35:36,255 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:35:36,324 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,E79F5A81E8EB7D33DAA0AC92E247E70F
+2021-02-22 13:35:36,324 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:35:36,440 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:35:36,509 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,4B0CC157B54EE3455C8019307237DF4C
+2021-02-22 13:35:36,509 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:35:36,609 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:35:36,641 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,CB4E96BA38DFABB2746285CECC07011C
+2021-02-22 13:36:40,322 ERROR com.bayer.integration.service.ImportManagerBase.importData:213 - 9105 -- Delete Project Copy Failed
+java.lang.IndexOutOfBoundsException: Index: 43, Size: 8
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.bayer.integration.service.ProjectCopyDeleteMgrImpl.importData(ProjectCopyDeleteMgrImpl.java:159)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:77)
+2021-02-22 13:36:40,333 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:01:04.541
+2021-02-22 13:36:40,333 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 13:36:40,333 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:03:12.433
+2021-02-22 13:36:40,334 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 13:39:26,322 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:d949c92c-7bab-495c-a7b1-f062e128e891)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:d949c92c-7bab-495c-a7b1-f062e128e891
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:39:26,346 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:39:26,729 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:39:26,729 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:39:26,729 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:39:26,729 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,729 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:39:26,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:39:26,778 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00.008
+2021-02-22 13:39:26,780 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:39:26,780 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:39:26,780 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:39:28,078 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:39:28,369 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:39:29,413 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,17BD5B425E7C8DFDDB4BA249AD71D85E
+2021-02-22 13:39:29,415 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:39:29,555 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:39:29,730 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,69AF48F1E77D54F95E547F349E3E8A4F
+2021-02-22 13:39:29,730 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:39:29,841 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:39:29,912 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,48F680DC4237F9728EE5778D4AABCE92
+2021-02-22 13:39:36,699 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 13:39:38,318 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 13:40:40,810 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:40:40,810 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 13:40:40,825 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,9AB03C31F8FFDE800C6109E2A5955E9E
+2021-02-22 13:40:40,825 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 13:40:43,701 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 13:40:43,705 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 13:40:43,705 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:40:43,705 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:16.925
+2021-02-22 13:40:44,017 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:40:44,118 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:40:44,187 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,00ED0DB85CFC0918EEE046FF0AE7663E
+2021-02-22 13:40:44,187 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:40:44,350 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:40:44,403 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,2751B3ADA12C58297A3443F336DFE71F
+2021-02-22 13:40:44,403 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:40:44,550 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:40:44,582 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D1C9B5C7882AA40CFFF93FF3781734C5
+2021-02-22 13:42:05,496 ERROR com.bayer.integration.service.ImportManagerBase.importData:213 - 9105 -- Delete Project Copy Failed
+java.lang.IndexOutOfBoundsException: Index: 43, Size: 9
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.bayer.integration.service.ProjectCopyDeleteMgrImpl.importData(ProjectCopyDeleteMgrImpl.java:159)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:77)
+2021-02-22 13:42:05,497 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyDeleteMgrImpl - P0000-00-00T00:01:21.792
+2021-02-22 13:42:05,497 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2021-02-22 13:42:05,498 INFO  com.bayer.integration.startup.SAPImport.main:95 - Elapsed time: P0000-00-00T00:02:45.042
+2021-02-22 13:42:05,498 INFO  com.bayer.integration.startup.SAPImport.main:97 - Finished importing data, exiting with a EXIT_CODE of: 0
+2021-02-22 13:43:49,140 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:fb6319e0-508f-438b-8e38-75e3f153e12e)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:fb6319e0-508f-438b-8e38-75e3f153e12e
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:43:49,155 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:43:49,621 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:43:49,621 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:43:49,621 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:43:49,621 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,621 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,641 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,641 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,641 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,641 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:43:49,641 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:43:49,641 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:43:50,877 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:43:51,193 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:43:52,196 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,83E16EED63863552505708F2A7EC154B
+2021-02-22 13:43:52,196 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:43:52,326 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:43:52,500 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,ADD4D185295CEEA3C508D58510640065
+2021-02-22 13:43:52,500 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:43:52,611 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:43:52,682 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,F9B3A8D65F6229BDB6412C4722BE6137
+2021-02-22 13:45:06,680 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 13:45:07,665 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 13:46:09,623 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:46:09,623 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 13:46:09,625 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,C4144C64DD7309349DF5B120E8B4254A
+2021-02-22 13:46:09,625 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 13:46:32,552 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 13:46:32,552 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 13:46:32,553 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:46:32,554 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:02:42.912
+2021-02-22 13:46:32,884 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:46:33,084 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:46:33,138 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D5713D78BAB9FB61EB1FC6035D568997
+2021-02-22 13:46:33,138 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:46:33,332 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:46:33,385 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,CF71EA5556064F9A41A72DDA3194EBF1
+2021-02-22 13:46:33,385 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:46:33,517 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:46:33,539 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,1339AA24966A973F3C6A648E0B9B33CB
+2021-02-22 13:48:39,816 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:fee7e204-68a4-451b-8776-d55dcc9d6c5e)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:fee7e204-68a4-451b-8776-d55dcc9d6c5e
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:48:39,829 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:48:40,255 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:48:40,255 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:48:40,255 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:48:40,255 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,255 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:48:40,270 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:48:40,270 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,270 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:48:40,270 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:48:40,270 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,286 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00.016
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,286 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,286 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:48:40,286 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:48:40,286 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:48:41,833 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:48:42,125 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:48:42,867 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,4DEB3DEC44E3E10C89ACB5FD4144176B
+2021-02-22 13:48:42,869 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:48:42,977 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:48:43,131 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,6385786B7770D41A41AAC11115ED8A2B
+2021-02-22 13:48:43,131 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:48:43,210 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:48:43,283 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,5FAEA3512F8058877E41548EA8488A97
+2021-02-22 13:49:19,161 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:0ebd5d9b-07c7-487c-8e32-b83883f1ae5d)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:0ebd5d9b-07c7-487c-8e32-b83883f1ae5d
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:49:19,192 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:49:19,562 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:49:19,562 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:49:19,562 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:49:19,577 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,577 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,593 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,593 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,593 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,593 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:49:19,593 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:49:19,593 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:49:20,822 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:49:21,105 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:49:22,512 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,295D99DC4359C4F1C808423EAE845BA0
+2021-02-22 13:49:22,517 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:49:22,648 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:49:22,802 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,3DFE774DC8BD53B2B0A379399135F885
+2021-02-22 13:49:22,802 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:49:22,896 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:49:22,965 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D9DAA10BD6B03D6D77E7AB08D8020A43
+2021-02-22 13:49:29,329 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 13:49:30,170 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 13:50:25,762 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:50:25,762 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 13:50:25,766 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,8D561D50A0E208BC7128B2213EE95C6D
+2021-02-22 13:50:25,766 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 13:50:28,817 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 13:50:28,822 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 13:50:28,822 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:50:28,823 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:09.214
+2021-02-22 13:50:29,171 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:50:29,286 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:50:29,355 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,365FF051806648A80AE3752F2B3E9C36
+2021-02-22 13:50:29,355 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:50:29,484 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:50:29,573 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D333DB86F05A7FF069011BF7C95D632A
+2021-02-22 13:50:29,574 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:50:29,687 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:50:29,724 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D44C631941FEDE527166974CDC94B486
+2021-02-22 13:54:00,770 ERROR com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection:73 - Connect to EcoSys Database Failed
+org.apache.commons.dbcp.SQLNestedException: Cannot create PoolableConnectionFactory (Login failed for user 'fmuser'. ClientConnectionId:10960610-c5b5-4aa8-b085-3cdfb5de4c2c)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1549)
+	at org.apache.commons.dbcp.BasicDataSource.createDataSource(BasicDataSource.java:1388)
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1044)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setConnection(StagingDatabaseManagerImpl.java:69)
+	at com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource(StagingDatabaseManagerImpl.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:840)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:651)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:78)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:59)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1010)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:472)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory$1.run(AbstractAutowireCapableBeanFactory.java:409)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:380)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:264)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:261)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:185)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:164)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:429)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:728)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:380)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:93)
+	at com.bayer.integration.startup.SAPImport.main(SAPImport.java:44)
+Caused by: com.microsoft.sqlserver.jdbc.SQLServerException: Login failed for user 'fmuser'. ClientConnectionId:10960610-c5b5-4aa8-b085-3cdfb5de4c2c
+	at com.microsoft.sqlserver.jdbc.SQLServerException.makeFromDatabaseError(SQLServerException.java:259)
+	at com.microsoft.sqlserver.jdbc.TDSTokenHandler.onEOF(tdsparser.java:256)
+	at com.microsoft.sqlserver.jdbc.TDSParser.parse(tdsparser.java:108)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.sendLogon(SQLServerConnection.java:4548)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.logon(SQLServerConnection.java:3409)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.access$100(SQLServerConnection.java:85)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection$LogonCommand.doExecute(SQLServerConnection.java:3373)
+	at com.microsoft.sqlserver.jdbc.TDSCommand.execute(IOBuffer.java:7344)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.executeCommand(SQLServerConnection.java:2713)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2261)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:1921)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:1762)
+	at com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1077)
+	at com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:623)
+	at org.apache.commons.dbcp.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:38)
+	at org.apache.commons.dbcp.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:582)
+	at org.apache.commons.dbcp.BasicDataSource.validateConnectionFactory(BasicDataSource.java:1556)
+	at org.apache.commons.dbcp.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:1545)
+	... 29 more
+2021-02-22 13:54:00,787 INFO  com.bayer.integration.persistence.StagingDatabaseManagerImpl.setEpcDataSource:50 - Connected to EcoSys Database
+2021-02-22 13:54:01,212 DEBUG com.bayer.integration.startup.SAPImport.readArguments:167 - No Input Parameter found, using skip properties from application config file
+2021-02-22 13:54:01,212 DEBUG com.bayer.integration.startup.SAPImport.main:57 - Skip SAP WBS Interface: true | Skip SAP Work Package Interface: true | Skip SAP Actuals Interfaces: true | Skip SAP Commitments Interfaces: true | Skip Track Hours Interface: true
+2021-02-22 13:54:01,214 DEBUG com.bayer.integration.startup.SAPImport.main:67 - Initiating Data Import...
+2021-02-22 13:54:01,214 INFO  com.bayer.integration.service.ImportManagerBase.importData:220 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,214 DEBUG com.bayer.integration.service.ImportManagerBase.importData:229 - 1000 � WBS Import Completed Successfully
+2021-02-22 13:54:01,235 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:54:01,235 INFO  com.bayer.integration.service.ImportManagerBase.importData:284 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,243 DEBUG com.bayer.integration.service.ImportManagerBase.importData:296 - 2000 � PMOrder Import Completed Successfully
+2021-02-22 13:54:01,293 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00.058
+2021-02-22 13:54:01,293 INFO  com.bayer.integration.service.ImportManagerBase.importData:160 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,295 DEBUG com.bayer.integration.service.ImportManagerBase.importData:169 - 6000 � PR Header Import Completed Successfully
+2021-02-22 13:54:01,295 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00.002
+2021-02-22 13:54:01,295 INFO  com.bayer.integration.service.ImportManagerBase.importData:188 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,295 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:54:01,295 INFO  com.bayer.integration.service.ImportManagerBase.importData:186 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,304 DEBUG com.bayer.integration.service.ImportManagerBase.importData:195 - 4000 � PO Header Import Completed Successfully
+2021-02-22 13:54:01,304 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00.009
+2021-02-22 13:54:01,304 INFO  com.bayer.integration.service.ImportManagerBase.importData:337 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,304 DEBUG com.bayer.integration.service.ImportManagerBase.importData:346 - 5000 � PO Line Item Import Completed Successfully
+2021-02-22 13:54:01,304 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:54:01,306 INFO  com.bayer.integration.service.ImportManagerBase.importData:368 - Skipped Project Interface. Change the skip property to 'false'
+2021-02-22 13:54:01,306 DEBUG com.bayer.integration.service.ImportManagerBase.importData:377 - 3000 � Project Actuals Import Completed Successfully
+2021-02-22 13:54:01,306 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2021-02-22 13:54:03,424 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:54:03,738 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:54:04,710 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,95E414EE2E9B8A8952F20C638329350A
+2021-02-22 13:54:04,718 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:54:04,860 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:54:05,176 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,2B2B5676B00D162F471C3573710DC951
+2021-02-22 13:54:05,176 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:54:05,286 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:54:05,379 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,D6D35504DA10D6FA2560025C9C7DC372
+2021-02-22 13:54:13,162 DEBUG com.bayer.integration.service.ImportManagerBase.importData:87 - Create Project Copy in EcoSys for Project: HSEM
+2021-02-22 13:54:14,099 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:118 - Create Copye for Project: HSEM
+2021-02-22 13:55:03,770 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:55:03,770 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:165 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyCreateAPI/?ProjectId=HSEM&CopyType=S returned a response status of 200 OK
+2021-02-22 13:55:03,778 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,4CB5EE9B313D037C69C0F7BE485B08E3
+2021-02-22 13:55:03,778 DEBUG com.bayer.integration.service.ImportManagerBase.requestCopy:180 - 9000 -- Create Project Copy Completed Successfully for Project: HSEM
+2021-02-22 13:55:08,210 DEBUG com.bayer.integration.service.ImportManagerBase.copyProject:144 - Complete!
+2021-02-22 13:55:08,218 DEBUG com.bayer.integration.service.ImportManagerBase.importData:89 - Create Project Copy in EcoSys completed for Project: HSEM
+2021-02-22 13:55:08,218 DEBUG com.bayer.integration.service.ImportManagerBase.importData:109 - 9000 -- Create Project Copies Completed Successfully
+2021-02-22 13:55:08,219 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ProjectCopyCreateMgrImpl - P0000-00-00T00:01:06.913
+2021-02-22 13:55:08,545 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectAPI/
+2021-02-22 13:55:08,649 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:55:08,727 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,2603889EB188F7FB51019BD107F7FC83
+2021-02-22 13:55:08,727 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectForCopyListAPI/
+2021-02-22 13:55:08,827 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:55:08,896 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,9715F1E94F62321567C83E6384ED22FB
+2021-02-22 13:55:08,896 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyListForDRAPI/
+2021-02-22 13:55:09,005 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:55:09,026 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,277976521E97CA9DD6ED10BE6B14C70C
+2021-02-22 13:56:10,219 DEBUG com.bayer.integration.service.ImportManagerBase.importData:166 - Delete Project System Copy in EcoSys for Project Copy: CP_000002_HSEM
+2021-02-22 13:56:11,352 DEBUG com.bayer.integration.service.ImportManagerBase.deleteProject:225 - Delete Project Copy: CP_000002_HSEM
+2021-02-22 13:56:11,645 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:56:11,646 DEBUG com.bayer.integration.service.ImportManagerBase.requestDelete:272 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyDeleteAPI/?ProjectId=CP_000002_HSEM returned a response status of 200 OK
+2021-02-22 13:56:11,650 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,1857BF30F8B865D6D3D9EE8F2FDFAACC
+2021-02-22 13:56:11,650 DEBUG com.bayer.integration.service.ImportManagerBase.requestDelete:287 - 9100 -- Delete Project Copy Completed Successfully for Project Copy: CP_000002_HSEM
+2021-02-22 13:56:11,651 DEBUG com.bayer.integration.service.ImportManagerBase.deleteProject:251 - Complete!
+2021-02-22 13:56:11,651 DEBUG com.bayer.integration.service.ImportManagerBase.importData:168 - Delete Project System Copy in EcoSys completed for Project Copy: CP_000002_HSEM
+2021-02-22 13:56:40,320 DEBUG com.bayer.integration.service.ImportManagerBase.importData:166 - Delete Project System Copy in EcoSys for Project Copy: CP_000006_HSEM
+2021-02-22 13:56:41,339 DEBUG com.bayer.integration.service.ImportManagerBase.deleteProject:225 - Delete Project Copy: CP_000006_HSEM
+2021-02-22 13:56:41,592 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:56:41,592 DEBUG com.bayer.integration.service.ImportManagerBase.requestDelete:272 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyDeleteAPI/?ProjectId=CP_000006_HSEM returned a response status of 200 OK
+2021-02-22 13:56:41,592 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,43E96981FBCB3E01C29AB174790D42AA
+2021-02-22 13:56:41,592 DEBUG com.bayer.integration.service.ImportManagerBase.requestDelete:287 - 9100 -- Delete Project Copy Completed Successfully for Project Copy: CP_000006_HSEM
+2021-02-22 13:56:41,592 DEBUG com.bayer.integration.service.ImportManagerBase.deleteProject:251 - Complete!
+2021-02-22 13:56:41,592 DEBUG com.bayer.integration.service.ImportManagerBase.importData:168 - Delete Project System Copy in EcoSys completed for Project Copy: CP_000006_HSEM
+2021-02-22 13:57:05,217 DEBUG com.bayer.integration.service.ImportManagerBase.importData:166 - Delete Project System Copy in EcoSys for Project Copy: CP_000008_HSEM
+2021-02-22 13:57:06,520 DEBUG com.bayer.integration.service.ImportManagerBase.deleteProject:225 - Delete Project Copy: CP_000008_HSEM
+2021-02-22 13:57:06,758 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2021-02-22 13:57:06,758 DEBUG com.bayer.integration.service.ImportManagerBase.requestDelete:272 - POST https://ecosys-trn.intranet.cnb:8443/ecosys/api/restxml/BayerProjectCopyDeleteAPI/?ProjectId=CP_000008_HSEM returned a response status of 200 OK
+2021-02-22 13:57:06,758 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,3D3266AC0124FFD10C1812FA1D69625C
+2021-02-22 13:57:06,758 DEBUG com.bayer.integration.service.ImportManagerBase.requestDelete:287 - 9100 -- Delete Project Copy Completed Successfully for Project Copy: CP_000008_HSEM
+2021-02-22 13:57:06,758 DEBUG com.bayer.integration.service.ImportManagerBase.deleteProject:251 - Complete!
+2021-02-22 13:57:06,758 DEBUG com.bayer.integration.service.ImportManagerBase.importData:168 - Delete Project System Copy in EcoSys completed for Project Copy: CP_000008_HSEM

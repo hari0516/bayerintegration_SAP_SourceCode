@@ -1,0 +1,43 @@
+CD "C:\Program Files\Java\jdk1.8.0_202\jre\bin
+
+SET JRE = “C:\Program Files\Java\jre1.8.0_202\lib\security\cacerts”
+SET JDK = “C:\Program Files\Java\jdk1.8.0_202\jre\lib\security\cacerts”
+SET CERT_TO_INSTALL = "C:\ecosysdev\ecosysdev.crt"
+SET ALIAS = BayerRoot
+
+SET LOCATION = %JRE%
+:: IF "%2" == "jdk" SET LOCATION = %JDK% else SET LOCATION = %JRE%
+
+Write-Host "Location: %LOCATION%"
+@ECHO %LOCATION%
+@ECHO %CERT_TO_INSTALL%
+Read-Host -Prompt "Press any key to continue"
+
+IF "%1" == "check"		GOTO :CHECK_CACERTS
+IF "%1" == "install"	GOTO :INSTALL_NEW_CERT
+
+ECHO bad parameter input program ending
+GOTO EOF:
+
+: CHECK_CACERTS
+:: Checking the store
+ECHO Line24
+
+Read-Host -Prompt "Press any key to continue"
+keytool -list -keystore %LOCATION%
+GOTO EOF:
+
+
+: INSTALL_NEW_CERT
+:: Certificate install
+ECHO Line33
+Read-Host -Prompt "Press any key to continue"
+keytool -import -alias %ALIAS% -keystore %LOCATION% -file %CERT_TO_INSTALL%
+GOTO EOF:
+
+
+
+: EOF
+@ECHO reached eof
+cd: c:\ecosysdev
+pause
