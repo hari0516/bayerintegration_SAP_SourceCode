@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Aug 07 19:47:59 IST 2023
+xmlsec-1.5.7.jar>central=
+xmlsec-1.5.7-sources.jar>central=
+xmlsec-1.5.7.pom>central=

@@ -1,7 +1,8 @@
 @ECHO OFF
+@REM set JAVA_BIN=C:\"Program Files"\Java\jdk1.8.0_201\bin
+set PATH=%path%/;C:\Program Files\java\jdk1.8.0_201\bin
 
-@REM set JAVA_BIN=C:\"Program Files"\Java\jdk1.7.0_79\bin
-set PATH=%path%/;C:\Program Files\java\jdk1.7.0_21\bin
-
-
-xjc -d .\gen-src -p com.bayer.integration.rest.wbs BayerWBSAPI.xsd
+xjc -d .\gen-src -p com.bayer.integration.rest.catg BayerCreateVendorAPI.xsd
+::xjc -p com.bayer.integration.rest.catg BayerCreateVendorAPI.xsd
+::xjc -d .\gen-src -p com.bayer.integration.rest.catg BayerCreateVendorAPI.xsd
+pause
