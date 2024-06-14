@@ -155,6 +155,7 @@ public class MasterDataManagerImpl extends ImportManagerBase implements ImportMa
 			//Prepare for the REST call
 			String baseUri = GlobalConstants.EPC_REST_PROTOCOL + "://" + GlobalConstants.EPC_REST_SERVER + ":" +
 					GlobalConstants.EPC_REST_PORT + "/" + GlobalConstants.EPC_REST_BASEURI2;
+			//baseUri = "https://ecosys-dev.intranet.cnb/ecosys/api"; //hari comment
 			Stopwatch timerBatch = new Stopwatch();
 
 			//Create Web Service Client
@@ -275,7 +276,8 @@ public class MasterDataManagerImpl extends ImportManagerBase implements ImportMa
 			//Read Vendor Data from EcoSys using createVendor API
 			Cookie session = null;
 			String baseUri2 = GlobalConstants.EPC_REST_PROTOCOL + "://" + GlobalConstants.EPC_REST_SERVER + ":"
-					+ GlobalConstants.EPC_REST_PORT + "/" + GlobalConstants.EPC_REST_BASEURI2;				
+					+ GlobalConstants.EPC_REST_PORT + "/" + GlobalConstants.EPC_REST_BASEURI2;		
+			//baseUri2 = "https://ecosys-dev.intranet.cnb/ecosys/api";  //hari comment
 
 			HashMap<String, String> aMap = new HashMap<String, String>();
 			aMap.put(GlobalConstants.EPC_PROJECT_PARAM,"");

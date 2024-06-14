@@ -29,113 +29,72 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/aalto-xml-0.9.10.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/aopalliance.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/asm.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/asm-3.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.core-jackson-annotations-2.7.8.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.core-jackson-core-2.7.8.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.core-jackson-databind-2.7.8.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.dataformat-jackson-dataformat-xml-2.7.8.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.module-jackson-module-jaxb-annotations-2.7.8.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/com.fasterxml-aalto-xml-0.9.10.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-codec.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-codec-commons-codec-1.9.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-collections4-4.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-csv-1.4.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-dbcp-1.4.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-io-2.5.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-io-commons-io-2.4.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-logging.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-logging-1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-logging-commons-logging-1.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/commons-pool-1.5.5.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/cxf-bundle.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/ecosys-batchqueue.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/ecosysintg.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/FastInfoset.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/gateway.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/geronimo-annotation_1.0_spec.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/geronimo-jaxws_2.1_spec.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/geronimo-stax-api_1.0_spec.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/geronimo-ws-metadata_2.0_spec.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/gson-2.9.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/httpclient-4.2.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/httpcore-4.2.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/intgserver.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-annotations-2.9.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-core-2.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-core-asl-1.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-databind-2.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-dataformat-xml-2.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-jaxrs-1.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-mapper-asl-1.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-module-jaxb-annotations-2.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jackson-xc-1.9.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/javax.activation-api-1.2.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-api-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-api-2.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-api-2.4.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-core-2.3.0.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-impl-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-impl-2.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-impl-2.4.0-b180725.0644.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-runtime-2.3.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-xjc-2.3.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jaxb-xjc-2.3.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jersey-bundle-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jersey-client-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jersey-core-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jersey-json-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jersey-server-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jersey-servlet-1.14.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jettison-1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/joda-time-1.6.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/json-20220320.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/jsr311-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/log4j-1.2.13.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/mail.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/mpxj.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/mssql-jdbc-6.4.0.jre8.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/neethi.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/odata-client-api-4.4.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/odata-client-core-4.4.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/odata-commons-api-4.4.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/odata-commons-core-4.4.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/old_mpxj.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/opencsv-2.3.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.apache.commons-commons-lang3-3.3.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.apache.httpcomponents-httpclient-4.2.6.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.apache.httpcomponents-httpcore-4.2.5.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.apache.olingo-olingo-odata2-api-2.0.10.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.apache.olingo-olingo-odata2-api-annotation-2.0.10.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.apache.olingo-olingo-odata2-core-2.0.10.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.codehaus.woodstox-stax2-api-3.1.4.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.jaxen_1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/org.slf4j-slf4j-api-1.7.7.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/osdt_cert.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/osdt_core.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/osdt_saml.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/osdt_saml2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/osdt_wss.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/osdt_xmlsec.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/p6ws-jaxws-client.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/poi-3.17.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/poi-ooxml-3.17.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/poi-ooxml-schemas-3.17.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/slf4j-api-1.7.11.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/slf4j-simple-1.7.7.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/spring.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/stax2-api-3.1.4.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/woodstox-core-5.0.3.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/wsdl4j-1.6.2.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/wss4j.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/wstx-asl.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/xmlbeans-2.6.0.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/xml-resolver.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/XmlSchema.jar"/>
-	<classpathentry kind="lib" path="D:/Work/EcoSys/Bayer/bayerintegration_SAP_SourceCode/libs/xmlsec.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/aalto-xml-0.9.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/asm-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.core-jackson-annotations-2.7.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.core-jackson-core-2.7.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.core-jackson-databind-2.7.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.dataformat-jackson-dataformat-xml-2.7.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/com.fasterxml.jackson.module-jackson-module-jaxb-annotations-2.7.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/com.fasterxml-aalto-xml-0.9.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-codec-commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-csv-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-io-2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-io-commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-logging-commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/commons-pool-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/ecosysintg.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/gateway.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/httpclient-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-annotations-2.9.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-core-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-databind-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-dataformat-xml-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-module-jaxb-annotations-2.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jaxb-core-2.3.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jaxb-impl-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jersey-bundle-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jersey-client-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jersey-core-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jersey-json-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jersey-server-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jersey-servlet-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jettison-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/joda-time-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/jsr311-api-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/log4j-1.2.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/mssql-jdbc-6.4.0.jre8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/odata-client-api-4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/odata-client-core-4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/odata-commons-api-4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/odata-commons-core-4.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/opencsv-2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.apache.commons-commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.apache.httpcomponents-httpclient-4.2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.apache.httpcomponents-httpcore-4.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.apache.olingo-olingo-odata2-api-2.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.apache.olingo-olingo-odata2-api-annotation-2.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.apache.olingo-olingo-odata2-core-2.0.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.codehaus.woodstox-stax2-api-3.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/org.slf4j-slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/slf4j-api-1.7.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/slf4j-simple-1.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/spring.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/stax2-api-3.1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/ECENB/OneDrive - Bayer/BayerSAPSources/bayerintegration_SAP_SourceCode/libs/woodstox-core-5.0.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

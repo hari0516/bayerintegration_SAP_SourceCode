@@ -1,0 +1,50 @@
+2024-06-05 21:09:12,404 DEBUG com.bayer.integration.startup.SAPImport.main:47 - Initiating Data Import...
+2024-06-05 21:09:13,752 DEBUG com.bayer.integration.startup.SAPImport.readArguments:111 - Arguments : CREATE_NEW_VENDOR : 100208 : TestVendor208
+2024-06-05 21:09:13,752 INFO  com.bayer.integration.startup.SAPImport.main:54 - DEBUG MODE: true
+  Skip SAP WBS Interface:		true
+  Skip SAP Work Package Interface:	true
+  Skip SAP Requisitions Header Interface:true
+  Skip SAP Requisition Lines Interface:	true
+  Skip SAP Commitments Header Interface:true
+  Skip SAP Commitment Lines Interface:	true
+  Skip SAP Actuals Interfaces:		true
+  Skip SAP Master Projects Monthly Closing: true
+  Skip CCL Validation:	true
+  Run SAP Year Close :	false
+2024-06-05 21:09:13,754 INFO  com.bayer.integration.service.ImportManagerBase.importData:199 - Skipped WBS Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,769 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: WBSImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:314 - Skipped PMOrder Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:326 - 2000 -- PMOrder Import Completed Successfully
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PMOrderImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:167 - Skipped PR Header Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:176 - 6000 -- PR Header Import Completed Successfully
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRHeaderImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:203 - Skipped PR Line Item Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: PRLineItemImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:193 - Skipped PO Header Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:202 - 4000 -- PO Header Import Completed Successfully
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POHeaderImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:440 - Skipped PO Line Item Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:449 - 5000 -- PO Line Item Import Completed Successfully
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: POLineItemImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:461 - Skipped Project Actuals Import Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:470 - 3000 -- Project Actuals Import Completed Successfully
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: ActualImportMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.service.ImportManagerBase.importData:219 - Skipped Monthly Closing Interface. Change the skip property to 'false'
+2024-06-05 21:09:13,770 DEBUG com.bayer.integration.service.ImportManagerBase.importData:228 - 9300 -- Monthly Closing for Master Projects with SAP Sub Completed Successfully
+2024-06-05 21:09:13,770 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: MonthlyClosingMgrImpl - P0000-00-00T00:00:00
+2024-06-05 21:09:14,411 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - resource is:https://ecosys-trn.intranet.cnb:443/ecosys/api/restxml/BayerCreateVendorAPI/?Category=Vendor
+2024-06-05 21:09:16,770 DEBUG com.ecosys.service.EpcRestMgrImpl.getAsApplicationXml:? - HTTP status code: 200
+2024-06-05 21:09:16,770 DEBUG com.bayer.integration.service.ImportManagerBase.getVendorAPITypes:298 - GET https://ecosys-trn.intranet.cnb:443/ecosys/api/restxml/BayerCreateVendorAPI/?Category=Vendor returned a response status of 200 OK
+2024-06-05 21:09:17,942 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,108060F83A9EF5A4099B1A006523F59E.${bbs.jvmRoute}
+2024-06-05 21:09:18,022 DEBUG com.bayer.integration.service.ImportManagerBase.processVendor:152 - creating vendor
+2024-06-05 21:09:18,270 DEBUG com.ecosys.service.EpcRestMgrImpl.postApplicationXmlAsApplicationXml:? - HTTP status code: 200
+2024-06-05 21:09:18,270 DEBUG com.bayer.integration.service.ImportManagerBase.requestVendor:190 - POST https://ecosys-trn.intranet.cnb:443/ecosys/api/restxml/BayerCreateVendorAPI/?Category=Vendor returned a response status of 200 OK
+2024-06-05 21:09:18,270 DEBUG com.ecosys.service.EpcRestMgrImpl.getSessionCookie:? - cookie:JSESSIONID,/ecosys,71C8B2A1CEC20DA09513393B856DCFBD.${bbs.jvmRoute}
+2024-06-05 21:09:18,270 DEBUG com.bayer.integration.service.ImportManagerBase.requestVendor:205 - UPDATE RESULT --> 28145864
+2024-06-05 21:09:18,270 DEBUG com.bayer.integration.service.ImportManagerBase.requestVendor:206 - Record with External Key ID of : 100208(manual)
+2024-06-05 21:09:18,270 DEBUG com.bayer.integration.service.ImportManagerBase.processVendor:171 - Create manual vendor complete!
+2024-06-05 21:09:18,270 INFO  com.bayer.integration.startup.SAPImport.main:81 - Total Loader Time: MasterDataManagerImpl - P0000-00-00T00:00:04.485
+2024-06-05 21:09:18,270 DEBUG com.bayer.integration.startup.SAPImport.main:88 - Data Import is now complete!
+2024-06-05 21:09:18,270 INFO  com.bayer.integration.startup.SAPImport.main:100 - Elapsed time: P0000-00-00T00:00:05.992
+2024-06-05 21:09:18,270 INFO  com.bayer.integration.startup.SAPImport.main:101 - Finished importing data, exiting with an EXIT_CODE of: 0
